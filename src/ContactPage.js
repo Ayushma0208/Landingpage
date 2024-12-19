@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 function ContactPage() {
-  const [file, setFile] = useState(null);
+  const [setFile] = useState(null);
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);

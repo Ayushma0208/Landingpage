@@ -1,12 +1,12 @@
-import React, {  } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import '../src/App.css';
-import HomePage from './Homepage';
-import ServicesPage from './ServicesPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
-import VentureList from './VentureList';
+import HomePage from './Homepage';
 import NewsEvents from './NewsEvents';
+import ServicesPage from './ServicesPage';
+import VentureList from './VentureList';
 import WhatsAppButton from "./WhatsAppButton";
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
               <li><a href="/news">News & Events</a></li>
             </ul>
           </nav>
-          <h1>Welcome to My Website</h1>
+          <h1>Kanak Enterprises</h1>
       <WhatsAppButton />
         </header>
         <Routes>
