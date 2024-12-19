@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 
 function HomePage() {
@@ -15,14 +15,14 @@ function HomePage() {
       setImageIndex((prevIndex) => (prevIndex + 1) % images.length);
     }, 2000); 
     return () => clearInterval(interval);
-  }, []);
+  },);
 
   
 
   return (
     <div className="homepage">
       <div className="slider">
-        {/* <img src={images[imageIndex]} alt="Slideshow" className="slider-image" /> */}
+        <img src={images[imageIndex]} alt="Slideshow" className="slider-image" />
       </div>
       {/* <div className="cta">
         <button onClick={() => alert("Credentials Requested!")}>Request Credentials</button>
