@@ -1,57 +1,111 @@
+/* General styling for the About Us page */
 .about-us-container {
-    font-family: Arial, sans-serif;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+.title {
+  text-align: center;
+  font-size: 36px;
+  margin: 20px 0;
+  color: #444;
+}
+
+/* Section Styling */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px;
+  width: 90%;
+  max-width: 1200px;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 20px auto;
+}
+
+.reverse {
+  flex-direction: row-reverse;
+}
+
+.text {
+  flex: 1;
+  padding: 20px;
+}
+
+.text h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.text p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.image {
+  flex: 1;
+  max-width: 400px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Contact Us Section */
+.contact-us-section {
+  text-align: center;
+  background-color: #1a1717;
+  color: white;
+  padding: 30px 20px;
+  margin-top: 30px;
+}
+
+.contact-us-section h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.contact-us-section p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.contact-us-section a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.contact-us-section a:hover {
+  text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section {
+    flex-direction: column;
     text-align: center;
   }
-  
-  .title {
-    font-size: 36px;
-    color: #333;
+
+  .reverse {
+    flex-direction: column;
+  }
+
+  .image {
+    max-width: 100%;
     margin-bottom: 20px;
   }
-  
-  .content {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-  }
-  
-  .section {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  
-  }
-  
-  .section img{
-    height: 300px;
-    width: 350px;
-  }
-  .section.reverse {
-    flex-direction: row-reverse;
-  }
-  
-  .image {
-    width: 40%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
-  
-  .text {
-    width: 50%;
-  }
-  
-  .text h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #444;
-  }
-  
-  .text p {
-    font-size: 18px;
-    line-height: 1.6;
-    color: #666;
-  }
-  
+}
