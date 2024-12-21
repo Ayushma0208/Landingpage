@@ -73,6 +73,11 @@ const ContactUs = () => {
         </div>
         <button type="submit">Submit</button>
       </form>
+      <div className='location_map'>
+        <a href='https://www.google.com/maps/place/Kanak+Enterprises/@23.2280418,77.4279545,14.74z/data=!4m6!3m5!1s0x397c43a0487a3ef1:0x65b1d690535d737!8m2!3d23.2276259!4d77.4306185!16s%2Fg%2F11rsrk4d9m?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D'>
+          <img src='mappp.png' alt='location_map' />
+        </a>
+      </div>
       <div className="company-info">
         <h3>Our Company</h3>
         <p>Company Name: XYZ Corp</p>

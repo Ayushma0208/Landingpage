@@ -8,6 +8,12 @@ body {
   line-height: 1.6;
 }
 
+.location_map img {
+  padding-top: 20px;
+  width: 600px;
+  height: 200px;
+}
+
 .App {
   text-align: center;
   background-color: #fff;
