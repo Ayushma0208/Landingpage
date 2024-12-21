@@ -8,6 +8,22 @@ body {
   line-height: 1.6;
 }
 
+.nav-bar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  list-style: none;
+}
+
+.nav-bar li {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+}
 .location_map img {
   padding-top: 20px;
   width: 600px;
@@ -17,7 +33,7 @@ body {
 .App {
   text-align: center;
   background-color: #fff;
-  padding: 20px;
+  padding: 0px;
 }
 
 /* Header */

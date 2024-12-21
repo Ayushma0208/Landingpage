@@ -1,19 +1,20 @@
-import React, {  } from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import React from "react";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import '../src/App.css';
-import HomePage from './Homepage';
-import ServicesPage from './ServicesPage';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
-import VentureList from './VentureList';
+import HomePage from './Homepage';
 import NewsEvents from './NewsEvents';
+import ServicesPage from './ServicesPage';
+import VentureList from './VentureList';
 function App() {
   return (
     <Router>
       <div className="App">
         <header className="App-header">
-          <nav>
-            <ul>
+          <nav className="nav-bar">
+            <li> Kanak Enterprises</li>
+            <ul className="nav-links">
               <li><a href="/">Home</a></li>
               <li><a href="/services">Services</a></li>
               <li><a href="/about">About Us</a></li>
