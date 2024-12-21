@@ -1,53 +1,40 @@
-import React from "react";
-import Slider from "react-slick"; // Import react-slick for carousel
+import React, { useEffect, useState } from "react";
+// import "./App.css";
 import "./Homepage.css";
-
 function Homepage() {
-  // Slider settings for the hero section
-  const sliderSettings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    autoplay: true,
-    autoplaySpeed: 3000,
-  };
+  const images = [
+    "xyzcharlize-7b49gfsgQZY-unsplash.jpg",
+    "patrick-hendry-6xeDIZgoPaw-unsplash.jpg",
+    "jason-mavrommatis-zAITDJYV09w-unsplash.jpg"
+  ];
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
 
   return (
     <div className="homepage">
       {/* Hero Section */}
       <section className="hero">
-        {/* Image Slider */}
-        <Slider {...sliderSettings} className="hero-slider">
-          <div>
-            <img
-              src="https://th.bing.com/th/id/OIP.0iX5z6qZJqh_jz59qkbMnAHaD3?rs=1&pid=ImgDetMain"
-              alt="Slide 1"
-              className="slider-image"
-            />
-          </div>
-          <div>
-            <img
-              src="https://th.bing.com/th/id/OIP.AzmDj4J84-J27c5RQBh3gQHaD3?rs=1&pid=ImgDetMain"
-              alt="Slide 2"
-              className="slider-image"
-            />
-          </div>
-          <div>
-            <img
-              src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/02/construction3.jpg"
-              alt="Slide 3"
-              className="slider-image"
-            />
-          </div>
-        </Slider>
-
+        <div>
+          <img
+            src={images[currentImageIndex]}
+            alt={`Slide ${currentImageIndex + 1}`}
+            className="slider-image"
+          />
+        </div>
         <div className="hero-overlay">
           <div className="hero-content">
             <h1>Precision Bearings for Every Need</h1>
             <p>
-              Delivering high-quality, durable, and precision-engineered bearings for diverse industries.
+              Delivering high-quality, durable, and precision-engineered
+              bearings for diverse industries.
             </p>
             <button className="cta-btn">Explore Our Products</button>
           </div>
@@ -74,9 +61,7 @@ function Homepage() {
               className="service-image"
             />
             <h3>High-Performance Bearings</h3>
-            <p>
-              Designed to withstand extreme conditions and high loads.
-            </p>
+            <p>Designed to withstand extreme conditions and high loads.</p>
           </div>
           <div className="service">
             <img

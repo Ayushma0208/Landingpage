@@ -1,61 +1,92 @@
-/* General Styling */
+:root{
+  margin:0px;
+  padding:0px;
+}
 body {
     font-family: "Arial", sans-serif;
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
   }
   
   .homepage {
     overflow-x: hidden;
+    padding:0px;
+    margin:0px;
   }
   
   /* Hero Section */
   .hero {
-    background-image: url("https://okcredit-blog-images-prod.storage.googleapis.com/2021/02/construction3.jpg");
     background-size: cover;
     background-position: center;
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     color: white;
+    height: 100vh; /* Ensure the hero section takes full viewport height */
+    overflow: hidden; /* Hide any overflow */
+  }
+  
+  .hero img {
+    position: absolute;
+    padding:0%;
+    margin:0%;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90%;
+    object-fit: cover;
+    z-index: 1; /* Place the image behind the overlay */
+    transition: opacity 1s ease-in-out; /* Smooth transition for image change */
+  }
+  
+  .hero img.hidden {
+    opacity: 0; /* Hide the image */
+  }
+  
+  .hero img.visible {
+    opacity: 1; /* Show the image */
   }
   
   .hero-overlay {
     background-color: rgba(0, 0, 0, 0.6);
     width: 100%;
-    height: 100%;
+    height: 80%;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1; /* Ensure the overlay is above the image */
+    padding:0px;
+    margin:0px;
   }
 
-  .hero-slider {
-    margin-top: 20px;
-  }
-  
   .slider-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
+    display: none; /* Hide all images by default */
+    padding:0%;
+    margin:0%;
   }
   
-  
+  .slider-image:first-child {
+    display: block; /* Show the first image */
+  }
   
   .hero-content {
     text-align: center;
+    z-index: 2; /* Ensure the content is above the overlay */
   }
   
   .hero-content h1 {
     font-size: 3rem;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
   }
   
   .hero-content p {
     font-size: 1.5rem;
     margin-bottom: 30px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+    z-index: 1000;
   }
   
   .cta-btn {
@@ -165,7 +196,6 @@ body {
     transform: scale(1.1);
   }
   
-  
   /* Contact Section */
   .contact {
     padding: 50px 20px;
@@ -203,4 +233,3 @@ body {
     text-align: center;
     padding: 20px;
   }
-  
