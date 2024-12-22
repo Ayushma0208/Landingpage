@@ -7,6 +7,7 @@ import HomePage from './Homepage';
 import NewsEvents from './NewsEvents';
 import ServicesPage from './ServicesPage';
 import VentureList from './VentureList';
+import ProductPage from "./ProductPage";
 function App() {
   return (
     <Router>
@@ -19,6 +20,7 @@ function App() {
               <li><a href="/services">Services</a></li>
               <li><a href="/about">About Us</a></li>
               <li><a href="/contact">Contact Us</a></li>
+              <li><a href="/product">Product</a></li>
               <li><a href="/ventures">Ventures</a></li>
               <li><a href="/news">News & Events</a></li>
             </ul>
@@ -30,6 +32,7 @@ function App() {
           <Route path="/services" element={<ServicesPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
+          <Route path="/product" element={<ProductPage />} />
           <Route path="/ventures" element={<VentureList />} />
           <Route path="/news" element={<NewsEvents />} />
         </Routes>
