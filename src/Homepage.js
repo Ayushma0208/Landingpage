@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-// import "./App.css";
 import "./Homepage.css";
+import { FaWhatsapp } from "react-icons/fa";
+
 function Homepage() {
   const images = [
     "xyzcharlize-7b49gfsgQZY-unsplash.jpg",
@@ -20,6 +21,16 @@ function Homepage() {
 
   return (
     <div className="homepage">
+      {/* WhatsApp Icon */}
+      <a
+        href="https://wa.me/1234567890" // Replace with your WhatsApp number
+        className="whatsapp-icon"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <FaWhatsapp size={40} color="#25D366" />
+      </a>
+
       {/* Hero Section */}
       <section className="hero">
         <div>
@@ -31,7 +42,7 @@ function Homepage() {
         </div>
         <div className="hero-overlay">
           <div className="hero-content">
-            <h1>Precision Bearings for Every Need</h1>
+            <h1>Kanak Enterprises for Every Need</h1>
             <p>
               Delivering high-quality, durable, and precision-engineered
               bearings for diverse industries.
@@ -116,9 +127,9 @@ function Homepage() {
 
       {/* About Section */}
       <section className="about">
-        <h2>About Ceco Bearings</h2>
+        <h2>About Kanak Enterprises</h2>
         <p>
-          Ceco Bearings specializes in providing premium bearings tailored to
+          Kanak Enterprises specializes in providing premium bearings tailored to
           the unique needs of our customers. With a commitment to quality and
           precision, we support industries across the globe with innovative
           solutions.
@@ -138,10 +149,40 @@ function Homepage() {
         </form>
       </section>
 
-      {/* Footer */}
-      <footer>
-        <p>© 2024 Kanak Enterprises. All Rights Reserved.</p>
-      </footer>
+            {/* Footer */}
+            <footer>
+  <div class="footer-content">
+    <div class="quick-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li>Our Company</li>
+        <li>Contact Us</li>
+        <li>Projects</li>
+      </ul>
+    </div>
+    <div class="branches">
+      <h3>Our Branches</h3>
+      <ul>
+        <li>Delhi NCR</li>
+        <li>Bihar</li>
+      </ul>
+    </div>
+    <div class="head-office">
+      <h3>Our Head Office/Works</h3>
+      <address>
+        Kanak Enterprises, Plot #69-C, Sector A,<br />
+        Bhopal-Hoshangabad Road (NH-46),<br />
+        Mandideep-462046, Madhya Pradesh
+      </address>
+      <p>+91-9109120039</p>
+      <p>+91-9981606757</p>
+      <p>+91-9109121313</p>
+      <p>Email: <a href="mailto:decg@decgintl.com">www@abc.com</a></p>
+    </div>
+  </div>
+  <p class="footer-bottom">© 2024 Kanak Enterprises. All Rights Reserved.</p>
+</footer>
+
     </div>
   );
 }
