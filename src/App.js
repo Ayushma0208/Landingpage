@@ -4,10 +4,10 @@ import '../src/App.css';
 import AboutPage from './AboutPage';
 import ContactPage from './ContactPage';
 import HomePage from './Homepage';
-// import NewsEvents from './NewsEvents';
-import ServicesPage from './ServicesPage';
-// import VentureList from './VentureList';
+import ProductDetailPage from "./ProductDetailPage";
 import ProductPage from "./ProductPage";
+import ServicesPage from './ServicesPage';
+
 function App() {
   return (
     <Router>
@@ -21,8 +21,6 @@ function App() {
               <li><a href="/about">About Us</a></li>
               <li><a href="/contact">Contact Us</a></li>
               <li><a href="/product">Product</a></li>
-              {/* <li><a href="/ventures">Ventures</a></li> */}
-              {/* <li><a href="/news">News & Events</a></li> */}
             </ul>
           </nav>
           
@@ -33,8 +31,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/product" element={<ProductPage />} />
-          {/* <Route path="/ventures" element={<VentureList />} /> */}
-          {/* <Route path="/news" element={<NewsEvents />} /> */}
+          <Route path="/product/:productId" element={<ProductDetailPage />} />
         </Routes>
       </div>
     </Router>
