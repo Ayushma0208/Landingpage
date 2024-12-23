@@ -155,9 +155,12 @@ function Homepage() {
     <div class="quick-links">
       <h3>Quick Links</h3>
       <ul>
-        <li>Our Company</li>
-        <li>Contact Us</li>
-        <li>Projects</li>
+        <li>
+        <a href="https://landingpage-blue-zeta.vercel.app/"> Our Company </a> </li>
+        <li>
+        <a href="https://landingpage-blue-zeta.vercel.app/contact/">Contact Us </a></li>
+        <li>
+          <a href="https://landingpage-blue-zeta.vercel.app/product">Our Products</a></li>
       </ul>
     </div>
     <div class="branches">

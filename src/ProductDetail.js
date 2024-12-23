@@ -1,61 +1,69 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import "./ProductDetail.css";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+import './ProductDetailPage.css';
 
-const productData = {
-  "rocker-roller-bearings": {
+const products = [
+  {
+    id: "rocker-roller-bearings",
     title: "Rocker & Roller Bearings",
     description:
-      "Detailed description about Rocker & Roller Bearings goes here...",
+      "Roller Type Bearing with Gear Arrangement. Rocker Type Bearing. Rocker Type Bearing. A rocker bearing is a type of expansion bearing that comes in a great variety.",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/banner1-5.jpg"
   },
-  "expansion-joints": {
+  {
+    id: "expansion-joints",
     title: "Expansion Joints",
     description:
-      "Detailed description about Expansion Joints goes here...",
+      "Single Strip seal elastomeric joint (Movement up to 80mm). Single strip expansion joint consist of two edge beams with anchorages and with elastomeric .",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/Compression-Seal-Expansion-Joint-400x300.jpg"
   },
-  "pot-bearings": {
+  {
+    id: "pot-bearings",
     title: "POT Bearings",
     description:
-      "Detailed description about POT Bearings goes here...",
+      "POT bearing consisting of a metal piston supported by a disc of unreinforced elastomer that is confined within a metal cylinder for allowing rotational movement",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/potbearing-600x300.jpg"
   },
-  "spherical-bridge-bearings": {
+  {
+    id: "spherical-bridge-bearings",
     title: "Spherical Bridge Bearings",
     description:
-      "Detailed description about Spherical Bridge Bearings goes here...",
+      "SPHERICAL bearings ensure the controlled transfer of loads between a structure’s superstructure and its substructure.",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/Spherical-Bearings-400x200.jpg"
   },
-  "elastomeric-bearing": {
+  {
+    id: "elastomeric-bearing",
     title: "Elastomeric Bearing",
     description:
-      "Detailed description about Elastomeric Bearing goes here...",
+      "We are designing and manufacturing Rubber Bridge Bearings made of up Neoprene / natural rubber since 1982.An elastomeric bridge bearing",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/Elastomeric-Bearing-1-400x200.jpg"
   },
-  "repair-rehabilitation": {
+  {
+    id: "repair-rehabilitation",
     title: "Repair & Rehabilitation",
     description:
-      "Detailed description about Repair & Rehabilitation goes here...",
+      "Structures such as Bridges, Aqueduct, Barrage, Dams are Infrastructure assets which need to be maintained / rehabilitated timely to retain their strength.",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/Bridge-Rehabilitation-1-400x200.jpg"
   },
-  "lockup-devices": {
+  {
+    id: "lockup-devices",
     title: "Lockup Devices",
     description:
-      "Detailed description about Lockup Devices goes here...",
+      "The retrofitting solution. The lock-up devices allow slow movement (creep, shrinkage and temperature effects) and maximize reactions for dynamic effects (braking force of trains and earthquake)..",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/lockup-devices-banner-400x200.jpg"
   },
-  "lead-rubber-bearings": {
+  {
+    id: "lead-rubber-bearings",
     title: "Lead Rubber Bearings",
     description:
-      "Detailed description about Lead Rubber Bearings goes here...",
+      "The high amounts of energy dissipation solution suitable for bridges and buildings in medium or high level seismic areas.",
     image: "https://cecobearings.com/wp-content/uploads/2020/09/Lead-Rubber-Isolators-banner-400x200.jpg"
   }
-};
+];
 
-const ProductDetail = () => {
-  const { productId } = useParams();
-  const product = productData[productId];
+const ProductDetailPage = () => {
+  const { id } = useParams();
+  const product = products.find((p) => p.id === id);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -63,11 +71,11 @@ const ProductDetail = () => {
 
   return (
     <div className="product-detail-container">
-      <h1 className="product-detail-title">{product.title}</h1>
+      <h1>{product.title}</h1>
       <img src={product.image} alt={product.title} className="product-detail-image" />
-      <p className="product-detail-description">{product.description}</p>
+      <p>{product.description}</p>
     </div>
   );
 };
 
-export default ProductDetail;
+export default ProductDetailPage;
