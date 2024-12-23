@@ -13,7 +13,7 @@ const AboutUsPage = () => {
             <p>
               We are dedicated to delivering the best products and services to
               our customers. Our mission is to create meaningful solutions that
-              improve lives and bring value to communities.oday DECG International having more than 300 Technical and non technical staff with ultramodern corporate office of 6000sqft with manufacturing unit 1,70,000 sqft having in-house MS casting unit, Rubber Moulding, FRP Rods & profiles, Sheared studs, Automatic Shot blasting Machine, Fabrication facility for Stainless Steel, Aluminum apart from Mild Steel. Our team includes highly qualified and experienced Bridge Bearing Designers, Matured production& Marketing managers in each Department. DECG International having world class in-house R&D & Testing laboratory.
+              improve lives and bring value to communities.oday DECG International having more than 300 Technical and non technical staff with ultramodern corporate office of 6000sqft with manufacturing unit 1,70,000 sqft having in-house MS casting unit, Rubber Moulding, FRP Rods & profiles, Sheared studs, Automatic Shot blasting Machine, Fabrication facility for Stainless Steel, Aluminum apart from Mild Steel. Our team includes highly qualified and experienced Bridge Bearing Designers, Matured production& Marketing managers in each Department. Kanak Enterprises having world class in-house R&D & Testing laboratory.
             </p>
             <img src="https://th.bing.com/th/id/R.e585e663b33952659c13b041393f5a5f?rik=wMRmtQUXPnVTbQ&riu=http%3a%2f%2fbdhenc.com.au%2fwp-content%2fuploads%2f2013%2f11%2fBUILDINGS.jpg&ehk=hISqJxgamuji1cJoidYbY2MIRJigw3c%2fl0jk0TU8SiY%3d&risl=&pid=ImgRaw&r=0" alt="Our Team" className="image" />
           </div>
@@ -64,7 +64,7 @@ const AboutUsPage = () => {
       <div className="contact-us-section">
         <h3>Do you have any query?</h3>
         <p>
-          Feel free to <a href="mailto:contact@ourcompany.com">contact us</a> for more
+          Feel free to <a href="https://landingpage-blue-zeta.vercel.app/contact">contact us</a> for more
           information. We're here to help!
         </p>
       </div>
